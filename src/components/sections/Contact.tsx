@@ -45,18 +45,20 @@ export default function Contact() {
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-3">Hubungi Saya</h2>
-          <p className="text-slate-400">
+          <h2 className="text-3xl font-bold dark:text-white mb-3">
+            Hubungi Saya
+          </h2>
+          <p className="dark:text-slate-400">
             Saya selalu terbuka untuk menerima pesan dari anda
           </p>
         </div>
 
         {/* Card */}
-        <div className="bg-gray-900 rounded-2xl p-8 shadow-xl border border-slate-800">
+        <div className=" dark:bg-gray-900 rounded-2xl p-8 shadow-xl border border-slate-800">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Nama */}
             <div>
-              <label className="text-slate-300 text-sm font-medium mb-2 flex items-center gap-2">
+              <label className="dark:text-slate-300 text-sm font-medium mb-2 flex items-center gap-2">
                 <User size={15} /> Nama
               </label>
               <input
@@ -66,13 +68,13 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="John Doe"
-                className="w-full bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                className="w-full dark:bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
               />
             </div>
 
             {/* Email */}
             <div>
-              <label className="text-slate-300 text-sm font-medium mb-2 flex items-center gap-2">
+              <label className="dark:text-slate-300 text-sm font-medium mb-2 flex items-center gap-2">
                 <Mail size={15} /> Email Kamu
               </label>
               <input
@@ -82,13 +84,13 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="john@email.com"
-                className="w-full bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                className="w-full dark:bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
               />
             </div>
 
             {/* Subject */}
             <div>
-              <label className="text-slate-300 text-sm font-medium mb-2 flex items-center gap-2">
+              <label className="dark:text-slate-300 text-sm font-medium mb-2 flex items-center gap-2">
                 <Mail size={15} /> Subject
               </label>
               <input
@@ -98,13 +100,13 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="Kerja Sama / Pertanyaan / dll"
-                className="w-full bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                className="w-full dark:bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
               />
             </div>
 
             {/* Pesan */}
             <div>
-              <label className="text-slate-300 text-sm font-medium mb-2 flex items-center gap-2">
+              <label className="dark:text-slate-300 text-sm font-medium mb-2 flex items-center gap-2">
                 <MessageSquare size={15} /> Pesan
               </label>
               <textarea
@@ -114,7 +116,7 @@ export default function Contact() {
                 required
                 rows={5}
                 placeholder="Tulis pesanmu di sini..."
-                className="w-full bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition resize-none"
+                className="w-full dark:bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition resize-none"
               />
             </div>
 

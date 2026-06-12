@@ -35,13 +35,13 @@ const socials = [
 ];
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 pt-24 pb-12">
+    <footer className="dark:bg-gray-900 pt-24 pb-12">
       <div className="container mx-auto px-4">
         {/* Top Section */}
         <div className="flex flex-wrap">
           {/* Brand & Contact */}
-          <div className="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
-            <h2 className="font-bold text-4xl text-white mb-5">FJA</h2>
+          <div className="w-full px-4 mb-12 dark:text-slate-300 font-medium md:w-1/3">
+            <h2 className="font-bold text-4xl dark:text-white mb-5">FJA</h2>
             <h3 className="font-bold text-2xl mb-2">Hubungi Kami</h3>
             <p>fazda473@gmail.com</p>
             <p>Jl. Sumur Jomblang Bogo</p>
@@ -50,10 +50,10 @@ export default function Footer() {
 
           {/* Kategori */}
           <div className="w-full px-4 mb-12 md:w-1/3">
-            <h3 className="font-semibold text-xl text-white mb-5">
+            <h3 className="font-semibold text-xl dark:text-white mb-5">
               Kategori Tulisan
             </h3>
-            <ul className="text-slate-300">
+            <ul className="dark:text-slate-300">
               {categories.map((cat) => (
                 <li key={cat}>
                   <a
@@ -69,8 +69,10 @@ export default function Footer() {
 
           {/* Tautan */}
           <div className="w-full px-4 mb-12 md:w-1/3">
-            <h3 className="font-semibold text-xl text-white mb-5">Tautan</h3>
-            <ul className="text-slate-300">
+            <h3 className="font-semibold text-xl dark:text-white mb-5">
+              Tautan
+            </h3>
+            <ul className="dark:text-slate-300">
               {links.map((link) => (
                 <li key={link.href}>
                   <a
@@ -94,14 +96,14 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 text-white hover:border-primary hover:bg-primary transition-all duration-200"
+                className="w-9 h-9 rounded-full flex justify-center items-center border border-gray-900 dark:border-slate-300 dark:text-white hover:border-primary hover:bg-primary transition-all duration-200"
               >
                 <Icon size={18} />
               </a>
             ))}
           </div>
           {/* Copyright */}
-          <p className="font-medium text-xs text-slate-500 text-center md:text-sm">
+          <p className="font-medium text-xs dark:text-slate-500 text-center md:text-sm">
             Dibuat dengan <span className="text-pink-500">❤</span> oleh{" "}
             <a
               href="https://www.instagram.com/fazdajulio/"
