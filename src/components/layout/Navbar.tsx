@@ -75,7 +75,9 @@ export default function Navbar() {
               <Moon className="w-5 h-5 text-gray-800" />
             )}
           </button>
-          <Button>Contact Me</Button>
+          <Button asChild>
+            <a href="#contact">Contact Me</a>
+          </Button>
         </div>
 
         {/* Mobile Right: theme + hamburger */}

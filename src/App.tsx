@@ -8,6 +8,8 @@ import Footer from "./components/sections/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Education from "./components/sections/Education";
+import Skill from "./components/sections/Skill";
 
 function App() {
   useEffect(() => {
@@ -22,6 +24,8 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Education />
+      <Skill />
       <Project />
       <Article />
       <Contact />

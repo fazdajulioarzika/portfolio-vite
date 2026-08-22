@@ -70,13 +70,9 @@ export default function Article() {
 
   return (
     <div className="pt-32 pb-32 px-16" id="blog">
-      <h2
-        className="text-3xl text-center font-semibold mb-12"
-        data-aos="fade-down"
-        data-aos-duration="1100"
-      >
-        Latest Blog
-      </h2>
+      <h1 className=" p-2 font-semibold border-b-2 border-primary text-dark text-2xl mb-24 lg:text-3xl dark:text-white">
+        Latest Articles
+      </h1>
 
       {/* Wrapper relative untuk tombol navigasi */}
       <div className="relative">

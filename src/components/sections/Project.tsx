@@ -131,13 +131,9 @@ export default function Project() {
 
   return (
     <section id="projects" className="space-y-6 pt-32 pb-32 px-16">
-      <h2
-        className="text-3xl text-center font-semibold"
-        data-aos="fade-down"
-        data-aos-duration="1100"
-      >
-        Projects
-      </h2>
+      <h1 className=" p-2 font-semibold border-b-2 border-primary text-dark text-2xl mb-24 lg:text-3xl dark:text-white">
+        My Repository Projects
+      </h1>
       <div className="flex items-center justify-end">
         <Select onValueChange={setLanguage} defaultValue="all">
           <SelectTrigger className="w-40">

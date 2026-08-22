@@ -1,4 +1,11 @@
-import { Youtube, Twitter, Instagram, Facebook, Github } from "lucide-react";
+import {
+  Youtube,
+  Twitter,
+  Instagram,
+  Facebook,
+  Github,
+  Linkedin,
+} from "lucide-react";
 
 const categories = ["Programming", "Teknologi", "Gaya Hidup"];
 
@@ -11,6 +18,11 @@ const links = [
 ];
 
 const socials = [
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/fazda-julio-arzika-a35737292/",
+    label: "LinkedIn",
+  },
   {
     icon: Youtube,
     href: "https://www.youtube.com/channel/UCf5MDnxpKS4E0gYA7K-pcKA",

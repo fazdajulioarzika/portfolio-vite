@@ -68,7 +68,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="John Doe"
-                className="w-full dark:bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                className="w-full dark:bg-gray-800 border border-slate-700 dark:text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
               />
             </div>
 
@@ -84,7 +84,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="john@email.com"
-                className="w-full dark:bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                className="w-full dark:bg-gray-800 border border-slate-700 dark:text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
               />
             </div>
 
@@ -100,7 +100,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="Kerja Sama / Pertanyaan / dll"
-                className="w-full dark:bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                className="w-full dark:bg-gray-800 border border-slate-700 dark:text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
               />
             </div>
 
@@ -116,7 +116,7 @@ export default function Contact() {
                 required
                 rows={5}
                 placeholder="Tulis pesanmu di sini..."
-                className="w-full dark:bg-gray-800 border border-slate-700 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition resize-none"
+                className="w-full dark:bg-gray-800 border border-slate-700 dark:text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition resize-none"
               />
             </div>
 

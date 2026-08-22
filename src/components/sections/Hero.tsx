@@ -85,7 +85,7 @@ export default function Hero() {
               ref={greetRef}
               className="text-base font-semibold text-primary md:text-xl"
             >
-              Halo Everyone ✌, I am
+              Halo Everyone, I am
               <span
                 ref={titleRef}
                 className="block font-bold text-black text-4xl mt-1 dark:text-white lg:text-5xl"
@@ -110,7 +110,9 @@ export default function Hero() {
             </p>
 
             <div ref={btnRef}>
-              <Button>Contact Me</Button>
+              <Button asChild>
+                <a href="#contact">Contact Me</a>
+              </Button>
             </div>
           </div>
 
