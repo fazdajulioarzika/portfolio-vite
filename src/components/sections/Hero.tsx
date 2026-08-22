@@ -76,7 +76,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="pt-24 pb-32 px-16">
+    <section id="home" className="pt-24 pb-28 px-16">
       <div className="container mx-auto">
         <div className="flex flex-wrap">
           {/* LEFT TEXT */}
@@ -121,18 +121,18 @@ export default function Hero() {
             <div className="mt-28 relative lg:mt-0 lg:right-0 lg:translate-x-15">
               <img
                 ref={imgRef}
-                src="/img/profile-wpap.png"
+                src="/img/profile-hero.png"
                 alt="Fazda Julio Arzika"
-                width={145}
+                width={350}
                 className="max-w-full relative z-10 mx-auto"
               />
               <span
                 ref={blobRef}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125 dark:animate-pulse"
+                className="absolute -bottom-20 left-1/2 -translate-x-1/2 md:scale-125 dark:animate-pulse"
               >
                 <svg
-                  width="350"
-                  height="350"
+                  width="500"
+                  height="500"
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
                 >

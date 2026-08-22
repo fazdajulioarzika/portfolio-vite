@@ -10,6 +10,8 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Education from "./components/sections/Education";
 import Skill from "./components/sections/Skill";
+import Experience from "./components/sections/Experience";
+import Gallery from "./components/sections/Gallery";
 
 function App() {
   useEffect(() => {
@@ -26,8 +28,10 @@ function App() {
       <About />
       <Education />
       <Skill />
+      <Experience />
       <Project />
       <Article />
+      <Gallery />
       <Contact />
       <Footer />
     </>

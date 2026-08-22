@@ -1,9 +1,9 @@
-export default function Education() {
+export default function Experience() {
   return (
-    <section id="education" className="pt-32 pb-32 px-16">
+    <section id="experience" className="pt-32 pb-32 px-16">
       <div className="container mx-auto">
         <h1 className=" p-2 font-semibold border-b-2 border-primary text-dark text-2xl mb-24 lg:text-3xl dark:text-white">
-          My Education
+          My Working Experience
         </h1>
         <div className="flex flex-wrap">
           {/* LEFT */}
@@ -13,19 +13,21 @@ export default function Education() {
             data-aos-duration="1100"
           >
             <h4 className="font-bold uppercase text-primary text-lg mb-3">
-              Vocational High School
+              Web Developer Internship Jan 2024 - Mar 2024
             </h4>
 
             <h2 className="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">
-              SMKN 1 Kedungwuni Pekalongan
+              LPK-LKP Dewa Computer Pekalongan
             </h2>
 
             <p className="text-base font-medium max-w-xl lg:text-lg">
-              My educational journey at SMKN 1 Kedungwuni, I achieved various
-              milestones that reflect my dedication and proficiency in the field
-              of information technology. One notable achievement is obtaining
-              the Junior Network Administrator certification from the
-              Professional Certification Institute.
+              During my internship at LPK-LKP Dewa Computer Pekalongan, I had
+              the opportunity to work on various web development projects. I
+              gained hands-on experience in front-end and back-end development,
+              utilizing technologies such as HTML, CSS, JavaScript, and PHP.
+              This internship allowed me to enhance my coding skills,
+              collaborate with a team of developers, and contribute to the
+              successful completion of projects.
             </p>
           </div>
 
@@ -73,7 +75,7 @@ export default function Education() {
                 </defs>
 
                 <image
-                  href="/img/boys-kotak.jpg"
+                  href="/img/work-lpk.jpeg"
                   width="580"
                   height="390"
                   preserveAspectRatio="xMidYMid slice"
@@ -89,6 +91,11 @@ export default function Education() {
             data-aos="fade-right"
             data-aos-duration="1100"
           >
+            <img
+              src="/img/maganghub.png"
+              alt=""
+              className="w-56 absolute z-10 top-0 right-0 rotate-20 rounded-lg shadow-lg shadow-primary/30"
+            />
             <div className="w-full max-w-[580px]">
               <svg
                 viewBox="0 0 580 390"
@@ -96,7 +103,7 @@ export default function Education() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <image
-                  href="/img/its-jas.JPG"
+                  href="/img/work-maganghub.jpg"
                   width="580"
                   height="390"
                   preserveAspectRatio="xMidYMid slice"
@@ -113,19 +120,21 @@ export default function Education() {
             data-aos-duration="1100"
           >
             <h4 className="font-bold uppercase text-primary text-lg mb-3">
-              College
+              General Affair (Maganghub) Nov 2025 - May 2026
             </h4>
 
             <h2 className="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">
-              Institut teknologi dan Sains Nahdlatul Ulama Pekalongan
+              Balai Pemasyarakatan Kelas II Pekalongan
             </h2>
 
             <p className="text-base font-medium max-w-xl lg:text-lg">
-              During my studies at Institut Teknologi dan Sains Nahdlatul Ulama
-              Pekalongan, I was actively involved in various extracurricular
-              activities. Serving on organizing committees for numerous campus
-              events provided me with valuable experience, enhancing my skills
-              in event management and working under time constraints.
+              After graduating from college, I had the opportunity to
+              participate in a national internship program organized by the
+              Ministry of Manpower. During my internship at the Class II
+              Correctional Center in Pekalongan, I was able to handle various
+              administrative and organizational tasks. I gained practical
+              experience in office management, document handling, and
+              communicating with different departments.
             </p>
           </div>
 
@@ -134,6 +143,11 @@ export default function Education() {
             data-aos="fade-right"
             data-aos-duration="1100"
           >
+            <img
+              src="/img/maganghub.png"
+              alt=""
+              className="w-36 absolute z-10 top-0 right-0 rotate-20 rounded-lg shadow-lg shadow-primary/30"
+            />
             <div className="w-full max-w-[580px]">
               <svg
                 viewBox="0 0 580 390"
@@ -141,7 +155,7 @@ export default function Education() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <image
-                  href="/img/its-jas.JPG"
+                  href="/img/work-maganghub.jpg"
                   width="580"
                   height="390"
                   preserveAspectRatio="xMidYMid slice"

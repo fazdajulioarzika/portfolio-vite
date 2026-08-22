@@ -18,7 +18,7 @@ export default function Skill() {
             <img
               src="/img/skill-programming.png"
               alt="Programming"
-              className="blob-img w-full max-w-md aspect-[4/3] mx-auto mb-4 object-cover shadow-lg"
+              className="blob-img w-full max-w-md aspect-[4/3] mx-auto mb-4 object-cover shadow-lg dark:shadow-primary/30"
             />
             <p className="text-base font-medium max-w-xl lg:text-lg text-center mx-auto">
               I have a strong foundation in programming and skilled in
@@ -109,7 +109,7 @@ export default function Skill() {
             <img
               src="/img/skill-support.jpeg"
               alt="IT technical support"
-              className="blob-img w-full max-w-md aspect-[4/3] mx-auto mb-4 object-cover shadow-lg"
+              className="blob-img w-full max-w-md aspect-[4/3] mx-auto mb-4 object-cover shadow-lg dark:shadow-primary/30"
             />
             <p className="text-base font-medium max-w-xl lg:text-lg text-center mx-auto">
               I have skills in providing technical support for IT systems,
@@ -129,7 +129,7 @@ export default function Skill() {
             <img
               src="/img/skill-design.png"
               alt="Gra"
-              className="blob-img w-full max-w-md aspect-[4/3] mx-auto mb-4 object-cover shadow-lg"
+              className="blob-img w-full max-w-md aspect-[4/3] mx-auto mb-4 object-cover shadow-lg dark:shadow-primary/30"
             />
             <p className="text-base font-medium max-w-xl lg:text-lg text-center mx-auto">
               I have a strong foundation in graphic design, with skills in
