@@ -23,7 +23,7 @@ function App() {
     });
   }, []);
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />
@@ -36,7 +36,7 @@ function App() {
       <Contact />
       <Footer />
       <ToastContainer />
-    </>
+    </div>
   );
 }
 
