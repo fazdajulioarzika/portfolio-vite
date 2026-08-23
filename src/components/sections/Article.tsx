@@ -15,13 +15,13 @@ export default function Article() {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: false,
     mode: "free-snap", // ← ganti dari "free" ke "free-snap"
-    slides: { perView: 4, spacing: 16 },
+    slides: { perView: 4.2, spacing: 16 },
     breakpoints: {
       "(max-width: 1024px)": {
-        slides: { perView: 2, spacing: 12 },
+        slides: { perView: 3.2, spacing: 12 },
       },
       "(max-width: 640px)": {
-        slides: { perView: 1, spacing: 12 },
+        slides: { perView: 1.2, spacing: 12 },
       },
     },
   });
