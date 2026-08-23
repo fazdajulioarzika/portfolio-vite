@@ -76,7 +76,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="pt-24 pb-28 px-16">
+    <section id="home" className="pt-24 pb-28 px-2 lg:px-16">
       <div className="container mx-auto">
         <div className="flex flex-wrap">
           {/* LEFT TEXT */}

@@ -116,7 +116,7 @@ export default function Project() {
 
   if (loading) {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-32 pb-32 px-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 pt-32 pb-32 px-16">
         {[...Array(8)].map((_, i) => (
           <Card key={i} className="p-4 space-y-3">
             <Skeleton className="h-6 w-3/4" />
@@ -130,7 +130,7 @@ export default function Project() {
   }
 
   return (
-    <section id="projects" className="space-y-6 pt-32 pb-32 px-16">
+    <section id="projects" className="space-y-6 pt-32 pb-32 px-2 lg:px-16">
       <h1 className=" p-2 font-semibold border-b-2 border-primary text-dark text-2xl mb-24 lg:text-3xl dark:text-white">
         My Repository Projects
       </h1>
@@ -150,7 +150,7 @@ export default function Project() {
         </Select>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {paginated.map((repo) => (
           <Card
             key={repo.id}

@@ -1,6 +1,6 @@
 export default function Experience() {
   return (
-    <section id="experience" className="pt-32 pb-32 px-16">
+    <section id="experience" className="pt-32 pb-32 px-2 lg:px-16">
       <div className="container mx-auto">
         <h1 className=" p-2 font-semibold border-b-2 border-primary text-dark text-2xl mb-24 lg:text-3xl dark:text-white">
           My Working Experience
@@ -146,7 +146,7 @@ export default function Experience() {
             <img
               src="/img/maganghub.png"
               alt=""
-              className="w-36 absolute z-10 top-0 right-0 rotate-20 rounded-lg shadow-lg shadow-primary/30"
+              className="w-36 md:w-42 absolute z-10 top-0 right-0 md:right-30 md:top-10 rotate-20 rounded-lg shadow-lg shadow-primary/30"
             />
             <div className="w-full max-w-[580px]">
               <svg

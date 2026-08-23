@@ -9,6 +9,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { showToast } from "@/lib/toast";
 
 export default function Article() {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -69,7 +70,7 @@ export default function Article() {
   ];
 
   return (
-    <div className="pt-32 pb-32 px-16" id="blog">
+    <div className="pt-32 pb-32 px-2 lg:px-16" id="blog">
       <h1 className=" p-2 font-semibold border-b-2 border-primary text-dark text-2xl mb-24 lg:text-3xl dark:text-white">
         Latest Articles
       </h1>
@@ -95,10 +96,16 @@ export default function Article() {
 
               {/* ✅ CardFooter di luar CardHeader */}
               <CardFooter>
-                <Button asChild className="w-full">
-                  <a href="#" target="_blank">
-                    Read Blog
-                  </a>
+                <Button
+                  className="w-full"
+                  onClick={() =>
+                    showToast(
+                      "Fitur ini sedang dalam pengembangan",
+                      "Kami sedang menyiapkannya, coba lagi nanti ya."
+                    )
+                  }
+                >
+                  Read Blog
                 </Button>
               </CardFooter>
             </Card>

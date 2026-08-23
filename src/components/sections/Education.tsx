@@ -1,6 +1,6 @@
 export default function Education() {
   return (
-    <section id="education" className="pt-32 pb-32 px-16">
+    <section id="education" className="pt-32 pb-32 px-2 lg:px-16">
       <div className="container mx-auto">
         <h1 className=" p-2 font-semibold border-b-2 border-primary text-dark text-2xl mb-24 lg:text-3xl dark:text-white">
           My Education

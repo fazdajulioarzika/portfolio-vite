@@ -2,7 +2,7 @@ import SocialIcon from "@/components/common/SocialIcon";
 
 export default function About() {
   return (
-    <section id="about" className="pt-32 pb-32 px-16">
+    <section id="about" className="pt-32 pb-32 px-2 lg:px-16">
       <div className="container mx-auto">
         <div className="flex flex-wrap">
           {/* LEFT */}
