@@ -121,10 +121,14 @@ export default function Hero() {
             <div className="mt-28 relative lg:mt-0 lg:right-0 lg:translate-x-15">
               <img
                 ref={imgRef}
-                src="/img/profile-hero.png"
+                src="/img/profile-vector.png"
                 alt="Fazda Julio Arzika"
-                width={350}
+                width={450}
                 className="max-w-full relative z-10 mx-auto"
+                style={{
+                  filter:
+                    "drop-shadow(0px -8px 3px oklch(48.8% 0.243 264.376))",
+                }}
               />
               <span
                 ref={blobRef}
