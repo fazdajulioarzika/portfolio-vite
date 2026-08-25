@@ -1,14 +1,12 @@
 // api/chat.ts
 import { GoogleGenAI } from "@google/genai";
+import { PROFILE_CONTEXT } from "./data/profile-context";
 
-// Sengaja TIDAK pakai `export const config = { runtime: "edge" }`.
-// Edge runtime di Vercel dilaporkan sering tidak konsisten meng-inject
-// environment variable saat `vercel dev`. Function Node.js biasa (default)
-// jauh lebih stabil untuk kasus ini.
-//
-// Karena tidak pakai edge, signature handler-nya bukan Web API
-// (Request/Response), tapi gaya Node klasik (req, res) — req.body sudah
-// otomatis di-parse dari JSON oleh Vercel, jadi tidak perlu req.json().
+// Import statis di atas (bukan dynamic import dari "../src/...") supaya
+// Vercel bisa mendeteksi dan ikut membundel file ini ke serverless
+// function. File-nya juga sengaja ditaruh di dalam folder api/ (bukan
+// src/), karena src/ dianggap milik build frontend dan tidak otomatis
+// ikut ter-bundle ke function.
 
 const SYSTEM_PROMPT = (context: string) => `
 Kamu adalah asisten AI di website portofolio. Jawab pertanyaan HANYA berdasarkan informasi berikut tentang pemilik portofolio. Jika informasi tidak ada di dalam data, katakan dengan sopan bahwa kamu tidak punya informasi tersebut. Jawab singkat, ramah, dan gunakan bahasa yang sama dengan pertanyaan pengguna.
@@ -36,7 +34,6 @@ export default async function handler(req: SimpleReq, res: SimpleRes) {
   }
 
   const { message = "", history = [] } = req.body ?? {};
-  const { PROFILE_CONTEXT } = await import("../src/data/profile-context");
 
   const apiKey = process.env.GEMINI_API_KEY;
 
