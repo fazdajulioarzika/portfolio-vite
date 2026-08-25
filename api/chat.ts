@@ -150,7 +150,7 @@ export default async function handler(req: SimpleReq, res: SimpleRes) {
     ];
 
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-3.6-flash",
       contents,
     });
 
@@ -165,7 +165,11 @@ export default async function handler(req: SimpleReq, res: SimpleRes) {
     res.status(200).json({ reply });
   } catch (err) {
     console.error("=== GEMINI SDK ERROR ===");
-    console.error(err);
+    console.error(
+      "Error message:",
+      err instanceof Error ? err.message : String(err)
+    );
+    console.error("Full error JSON:", JSON.stringify(err, null, 2));
     console.error("========================");
 
     res.status(200).json({
