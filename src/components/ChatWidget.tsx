@@ -84,7 +84,7 @@ export default function ChatWidget() {
                   {m.role === "user" ? <User size={14} /> : <Bot size={14} />}
                 </div>
                 <div
-                  className={`max-w-[75%] rounded-lg px-3 py-2 text-sm ${
+                  className={`max-w-[75%] whitespace-pre-line rounded-lg px-3 py-2 text-sm ${
                     m.role === "user"
                       ? "bg-primary text-white"
                       : "bg-dark/5 text-dark dark:bg-white/10 dark:text-white"
