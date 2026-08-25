@@ -13,6 +13,7 @@ import Skill from "./components/sections/Skill";
 import Experience from "./components/sections/Experience";
 import Gallery from "./components/sections/Gallery";
 import ToastContainer from "./components/ui/toast-container";
+import ChatWidget from "./components/ChatWidget";
 
 function App() {
   useEffect(() => {
@@ -36,6 +37,7 @@ function App() {
       <Contact />
       <Footer />
       <ToastContainer />
+      <ChatWidget />
     </div>
   );
 }
