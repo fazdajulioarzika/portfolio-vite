@@ -1,13 +1,14 @@
 // api/chat.ts
 import { GoogleGenAI } from "@google/genai";
 
-// PENTING: runtime "edge" wajib ada di sini, karena handler-nya pakai
-// signature Web API (Request/Response dengan .json()). Kalau baris ini
-// dihapus, Vercel jalankan sebagai Node.js function klasik (req, res)
-// dan req.json() tidak akan ada -> error "req.json is not a function".
-export const config = {
-  runtime: "edge",
-};
+// Sengaja TIDAK pakai `export const config = { runtime: "edge" }`.
+// Edge runtime di Vercel dilaporkan sering tidak konsisten meng-inject
+// environment variable saat `vercel dev`. Function Node.js biasa (default)
+// jauh lebih stabil untuk kasus ini.
+//
+// Karena tidak pakai edge, signature handler-nya bukan Web API
+// (Request/Response), tapi gaya Node klasik (req, res) — req.body sudah
+// otomatis di-parse dari JSON oleh Vercel, jadi tidak perlu req.json().
 
 const SYSTEM_PROMPT = (context: string) => `
 Kamu adalah asisten AI di website portofolio. Jawab pertanyaan HANYA berdasarkan informasi berikut tentang pemilik portofolio. Jika informasi tidak ada di dalam data, katakan dengan sopan bahwa kamu tidak punya informasi tersebut. Jawab singkat, ramah, dan gunakan bahasa yang sama dengan pertanyaan pengguna.
@@ -17,12 +18,24 @@ ${context}
 === AKHIR DATA ===
 `;
 
-export default async function handler(req: Request): Promise<Response> {
+type SimpleReq = {
+  method?: string;
+  body?: { message?: string; history?: { role: string; text: string }[] };
+};
+
+type SimpleRes = {
+  status: (code: number) => SimpleRes;
+  json: (data: unknown) => void;
+  send: (data: unknown) => void;
+};
+
+export default async function handler(req: SimpleReq, res: SimpleRes) {
   if (req.method !== "POST") {
-    return new Response("Method not allowed", { status: 405 });
+    res.status(405).send("Method not allowed");
+    return;
   }
 
-  const { message, history = [] } = await req.json();
+  const { message = "", history = [] } = req.body ?? {};
   const { PROFILE_CONTEXT } = await import("../src/data/profile-context");
 
   const apiKey = process.env.GEMINI_API_KEY;
@@ -33,12 +46,10 @@ export default async function handler(req: Request): Promise<Response> {
   );
 
   if (!apiKey) {
-    return new Response(
-      JSON.stringify({
-        reply: "Konfigurasi server belum lengkap (API key tidak ditemukan).",
-      }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
-    );
+    res.status(200).json({
+      reply: "Konfigurasi server belum lengkap (API key tidak ditemukan).",
+    });
+    return;
   }
 
   try {
@@ -52,7 +63,7 @@ export default async function handler(req: Request): Promise<Response> {
           { text: "Baik, saya siap menjawab pertanyaan seputar profil ini." },
         ],
       },
-      ...history.map((h: { role: string; text: string }) => ({
+      ...history.map((h) => ({
         role: h.role === "user" ? "user" : "model",
         parts: [{ text: h.text }],
       })),
@@ -72,21 +83,14 @@ export default async function handler(req: Request): Promise<Response> {
       response.text ??
       "Maaf, saya sedang tidak bisa menjawab. Coba lagi sebentar lagi.";
 
-    return new Response(JSON.stringify({ reply }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
+    res.status(200).json({ reply });
   } catch (err) {
     console.error("=== GEMINI SDK ERROR ===");
     console.error(err);
     console.error("========================");
 
-    return new Response(
-      JSON.stringify({
-        reply:
-          "Maaf, terjadi kesalahan pada server AI. Coba lagi sebentar lagi.",
-      }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
-    );
+    res.status(200).json({
+      reply: "Maaf, terjadi kesalahan pada server AI. Coba lagi sebentar lagi.",
+    });
   }
 }
