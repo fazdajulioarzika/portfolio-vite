@@ -117,7 +117,7 @@ export default function Education() {
             </h4>
 
             <h2 className="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">
-              Institut teknologi dan Sains Nahdlatul Ulama Pekalongan
+              Institut Teknologi dan Sains Nahdlatul Ulama Pekalongan
             </h2>
 
             <p className="text-base font-medium max-w-xl lg:text-lg">

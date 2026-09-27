@@ -1,6 +1,19 @@
 // api/chat.ts
 import { GoogleGenAI } from "@google/genai";
 
+// Fallback: kalau `process.env.GEMINI_API_KEY` kosong (bug vercel dev yang
+// kadang tidak inject env var otomatis di lokal), coba load manual dari
+// .env.local. Ini aman untuk production juga — kalau file-nya tidak ada
+// (memang tidak ada di server Vercel), cuma di-skip diam-diam via try/catch.
+if (!process.env.GEMINI_API_KEY) {
+  try {
+    // @ts-ignore - loadEnvFile tersedia di Node.js 21.7+/22+
+    process.loadEnvFile(new URL("../.env.local", import.meta.url));
+  } catch {
+    // file tidak ada / gagal load - biarkan, nanti dicek lagi di bawah
+  }
+}
+
 // PROFILE_CONTEXT ditaruh LANGSUNG di sini (bukan import dari file lain),
 // supaya tidak ada masalah resolusi modul antar-file di runtime Node ESM
 // Vercel. Kalau mau update datanya, edit langsung di bawah ini.
