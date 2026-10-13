@@ -434,7 +434,7 @@ export default function Project() {
   const [active, setActive] = useState<ProjectItem | null>(null);
 
   return (
-    <section id="project" className="pt-32 pb-32 px-2 lg:px-16">
+    <section id="projects" className="pt-32 pb-32 px-2 lg:px-16">
       <div className="container mx-auto">
         <h1 className="p-2 font-semibold border-b-2 border-primary text-dark text-2xl mb-24 lg:text-3xl dark:text-white">
           My Projects
