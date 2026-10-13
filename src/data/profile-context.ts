@@ -6,15 +6,14 @@ export const PROFILE_CONTEXT = `
 === FAKTA CEPAT ===
 Nama: Fazda Julio Arzika
 Email: fazda473@gmail.com
-Telepon/WhatsApp: +62 858 2626 8379
 Lokasi: Pekalongan, Jawa Tengah, Indonesia
 LinkedIn: https://www.linkedin.com/in/fazda-julio-arzika-a35737292/
-Portofolio: https://fazdajulioarzika-portfolio.vercel.app/
-Status: Fresh graduate Informatika (lulus 2025)
+Portofolio: https://arzikadev.my.id/
+Status: Lulusan Informatika (lulus 2025)
 IPK Sarjana: 3.81
 
 === RINGKASAN PROFIL ===
-Saya Fazda Julio Arzika, fresh graduate Informatika dengan keterampilan dalam
+Saya Fazda Julio Arzika, lulusan Informatika dengan keterampilan dalam
 pengembangan web, dukungan teknisi TI, dan administrasi jaringan. Saya memiliki
 pemahaman yang baik tentang sistem basis data, troubleshooting perangkat keras
 dan jaringan, serta pengembangan aplikasi berbasis web. Saya juga tersertifikasi
