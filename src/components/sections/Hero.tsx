@@ -38,7 +38,7 @@ export default function Hero() {
       )
       .to(roleRef.current, {
         duration: 1,
-        text: { value: "Website Developer", delimiter: "" },
+        text: { value: "Software Engineer", delimiter: "" },
         ease: "none",
       })
       // Kedipkan kursor lalu hilangkan
@@ -105,7 +105,7 @@ export default function Hero() {
             </h2>
 
             <p ref={descRef} className="font-medium mb-10 leading-relaxed">
-              a web developer who loves creating smooth, modern websites and
+              a software engineer who loves creating smooth, modern websites and
               applications.
             </p>
 

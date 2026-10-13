@@ -12,10 +12,10 @@ export default function Experience() {
             data-aos="fade-down"
             data-aos-duration="1100"
           >
-            <h4 className="font-bold uppercase text-primary text-lg mb-3">
-              Web Developer Internship Jan 2024 - Mar 2024
+            <h4 className="font-bold uppercase text-primary text-xl">
+              Web Developer Internship
             </h4>
-
+            <p className="font-semibold mb-4">Jan 2024 - Mar 2024</p>
             <h2 className="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">
               LPK-LKP Dewa Computer Pekalongan
             </h2>
@@ -119,10 +119,10 @@ export default function Experience() {
             data-aos="fade-down"
             data-aos-duration="1100"
           >
-            <h4 className="font-bold uppercase text-primary text-lg mb-3">
-              General Affair (Maganghub) Nov 2025 - May 2026
+            <h4 className="font-bold uppercase text-primary text-xl">
+              General Affair (Maganghub)
             </h4>
-
+            <p className="font-semibold mb-4">Nov 2025 - May 2026</p>
             <h2 className="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">
               Balai Pemasyarakatan Kelas II Pekalongan
             </h2>
